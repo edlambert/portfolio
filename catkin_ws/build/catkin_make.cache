@@ -1,0 +1,2 @@
+performance_tests
+-DCATKIN_DEVEL_PREFIX=/home/user/git_clones/portfolio/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/user/git_clones/portfolio/catkin_ws/install -G Unix Makefiles

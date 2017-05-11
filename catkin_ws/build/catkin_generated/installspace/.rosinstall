@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/user/git_clones/portfolio/catkin_ws/install/setup.sh
