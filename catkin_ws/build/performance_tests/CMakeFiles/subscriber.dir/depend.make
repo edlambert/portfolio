@@ -56,6 +56,7 @@ performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinet
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/std_msgs/Int32.h
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/std_msgs/String.h
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 performance_tests/CMakeFiles/subscriber.dir/src/subscriber.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h

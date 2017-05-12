@@ -1,12 +1,22 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "std_msgs/Int32.h"
 
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
+int last = 0;;
+int discontinuity_count = 0;
+void chatterCallback(const std_msgs::Int32::ConstPtr& msg)
 {
-  ROS_INFO("I heard: [%s]", msg->data.c_str());
+  
+  ROS_INFO("I heard: [%d] (discontinuity_count: %d)", msg->data, discontinuity_count);
+  if(msg->data - last != 1)
+  {
+	ROS_INFO("Discontinuity!! I heard: [%d] after [%d]", msg->data, last);
+	discontinuity_count ++;
+  }
+  last = msg->data;
 }
 
 int main(int argc, char **argv)

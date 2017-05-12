@@ -1,5 +1,6 @@
 	#include "ros/ros.h"
 	#include "std_msgs/String.h"
+  #include "std_msgs/Int32.h"
 	
 	#include <sstream>
 	
@@ -55,7 +56,7 @@
 			std::cout << "loop_rate_hz: " << loop_rate_hz << std::endl;
 		}
     int tx_buffer_count = 1000;
-	  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", tx_buffer_count);
+	  ros::Publisher chatter_pub = n.advertise<std_msgs::Int32>("chatter", tx_buffer_count);
 	
     //loop_rate has units of hz
 	  ros::Rate loop_rate(loop_rate_hz);
@@ -70,13 +71,14 @@
 	    /**
 	     * This is a message object. You stuff it with data, and then publish it.
 	     */
-	    std_msgs::String msg;
+	    std_msgs::Int32 msg;
 	
-	    std::stringstream ss;
+	    /*std::stringstream ss;
 	    ss << "hello world " << count;
 	    msg.data = ss.str();
-	
-	    ROS_INFO("%s", msg.data.c_str());
+	*/
+      msg.data = count;
+	    ROS_INFO("%d", msg.data);
 	
 	    /**
 	     * The publish() function is how you send messages. The parameter
