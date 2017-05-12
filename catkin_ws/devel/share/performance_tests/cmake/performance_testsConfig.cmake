@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(performance_tests_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/user/git_clones/portfolio/catkin_ws/devel/include " STREQUAL " ")
   set(performance_tests_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/user/git_clones/portfolio/catkin_ws/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(performance_tests_EXPORTED_TARGETS "")
+set(performance_tests_EXPORTED_TARGETS "performance_tests_generate_messages_cpp;performance_tests_generate_messages_eus;performance_tests_generate_messages_lisp;performance_tests_generate_messages_nodejs;performance_tests_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${performance_tests_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -153,7 +153,7 @@ foreach(t ${performance_tests_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND performance_tests_EXPORTED_TARGETS ${${performance_tests_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "performance_tests-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${performance_tests_DIR}/${extra})

@@ -78,17 +78,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,6 +88,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -166,19 +166,94 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+performance_tests/CMakeFiles/subscriber.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/subscriber.dir/rule
+.PHONY : performance_tests/CMakeFiles/subscriber.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+subscriber: performance_tests/CMakeFiles/subscriber.dir/rule
 
-.PHONY : std_msgs_generate_messages_py
+.PHONY : subscriber
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build.make performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+subscriber/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/subscriber.dir/build.make performance_tests/CMakeFiles/subscriber.dir/build
+.PHONY : subscriber/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/publisher.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/publisher.dir/rule
+.PHONY : performance_tests/CMakeFiles/publisher.dir/rule
+
+# Convenience name for target.
+publisher: performance_tests/CMakeFiles/publisher.dir/rule
+
+.PHONY : publisher
+
+# fast build rule for target.
+publisher/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/publisher.dir/build.make performance_tests/CMakeFiles/publisher.dir/build
+.PHONY : publisher/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/rule
+
+# Convenience name for target.
+performance_tests_generate_messages_py: performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/rule
+
+.PHONY : performance_tests_generate_messages_py
+
+# fast build rule for target.
+performance_tests_generate_messages_py/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/build
+.PHONY : performance_tests_generate_messages_py/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_gennodejs.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_gennodejs.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_gennodejs.dir/rule
+
+# Convenience name for target.
+performance_tests_gennodejs: performance_tests/CMakeFiles/performance_tests_gennodejs.dir/rule
+
+.PHONY : performance_tests_gennodejs
+
+# fast build rule for target.
+performance_tests_gennodejs/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_gennodejs.dir/build.make performance_tests/CMakeFiles/performance_tests_gennodejs.dir/build
+.PHONY : performance_tests_gennodejs/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_genlisp.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_genlisp.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_genlisp.dir/rule
+
+# Convenience name for target.
+performance_tests_genlisp: performance_tests/CMakeFiles/performance_tests_genlisp.dir/rule
+
+.PHONY : performance_tests_genlisp
+
+# fast build rule for target.
+performance_tests_genlisp/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_genlisp.dir/build.make performance_tests/CMakeFiles/performance_tests_genlisp.dir/build
+.PHONY : performance_tests_genlisp/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_genpy.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_genpy.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_genpy.dir/rule
+
+# Convenience name for target.
+performance_tests_genpy: performance_tests/CMakeFiles/performance_tests_genpy.dir/rule
+
+.PHONY : performance_tests_genpy
+
+# fast build rule for target.
+performance_tests_genpy/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_genpy.dir/build.make performance_tests/CMakeFiles/performance_tests_genpy.dir/build
+.PHONY : performance_tests_genpy/fast
 
 # Convenience name for target.
 performance_tests/CMakeFiles/roscpp_generate_messages_py.dir/rule:
@@ -331,6 +406,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_generate_messages.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages.dir/rule
+
+# Convenience name for target.
+performance_tests_generate_messages: performance_tests/CMakeFiles/performance_tests_generate_messages.dir/rule
+
+.PHONY : performance_tests_generate_messages
+
+# fast build rule for target.
+performance_tests_generate_messages/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages.dir/build
+.PHONY : performance_tests_generate_messages/fast
+
+# Convenience name for target.
 performance_tests/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : performance_tests/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -391,34 +481,124 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-performance_tests/CMakeFiles/publisher.dir/rule:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/publisher.dir/rule
-.PHONY : performance_tests/CMakeFiles/publisher.dir/rule
+performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-publisher: performance_tests/CMakeFiles/publisher.dir/rule
+performance_tests_generate_messages_nodejs: performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/rule
 
-.PHONY : publisher
+.PHONY : performance_tests_generate_messages_nodejs
 
 # fast build rule for target.
-publisher/fast:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/publisher.dir/build.make performance_tests/CMakeFiles/publisher.dir/build
-.PHONY : publisher/fast
+performance_tests_generate_messages_nodejs/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/build
+.PHONY : performance_tests_generate_messages_nodejs/fast
 
 # Convenience name for target.
-performance_tests/CMakeFiles/subscriber.dir/rule:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/subscriber.dir/rule
-.PHONY : performance_tests/CMakeFiles/subscriber.dir/rule
+performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-subscriber: performance_tests/CMakeFiles/subscriber.dir/rule
+std_msgs_generate_messages_py: performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : subscriber
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
-subscriber/fast:
-	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/subscriber.dir/build.make performance_tests/CMakeFiles/subscriber.dir/build
-.PHONY : subscriber/fast
+std_msgs_generate_messages_py/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build.make performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+performance_tests_generate_messages_lisp: performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/rule
+
+.PHONY : performance_tests_generate_messages_lisp
+
+# fast build rule for target.
+performance_tests_generate_messages_lisp/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/build
+.PHONY : performance_tests_generate_messages_lisp/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_gencpp.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_gencpp.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_gencpp.dir/rule
+
+# Convenience name for target.
+performance_tests_gencpp: performance_tests/CMakeFiles/performance_tests_gencpp.dir/rule
+
+.PHONY : performance_tests_gencpp
+
+# fast build rule for target.
+performance_tests_gencpp/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_gencpp.dir/build.make performance_tests/CMakeFiles/performance_tests_gencpp.dir/build
+.PHONY : performance_tests_gencpp/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/rule
+.PHONY : performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/rule
+
+# Convenience name for target.
+_performance_tests_generate_messages_check_deps_SuperAwesome: performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/rule
+
+.PHONY : _performance_tests_generate_messages_check_deps_SuperAwesome
+
+# fast build rule for target.
+_performance_tests_generate_messages_check_deps_SuperAwesome/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/build.make performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/build
+.PHONY : _performance_tests_generate_messages_check_deps_SuperAwesome/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+performance_tests_generate_messages_cpp: performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/rule
+
+.PHONY : performance_tests_generate_messages_cpp
+
+# fast build rule for target.
+performance_tests_generate_messages_cpp/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/build
+.PHONY : performance_tests_generate_messages_cpp/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+performance_tests_generate_messages_eus: performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/rule
+
+.PHONY : performance_tests_generate_messages_eus
+
+# fast build rule for target.
+performance_tests_generate_messages_eus/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/build
+.PHONY : performance_tests_generate_messages_eus/fast
+
+# Convenience name for target.
+performance_tests/CMakeFiles/performance_tests_geneus.dir/rule:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 performance_tests/CMakeFiles/performance_tests_geneus.dir/rule
+.PHONY : performance_tests/CMakeFiles/performance_tests_geneus.dir/rule
+
+# Convenience name for target.
+performance_tests_geneus: performance_tests/CMakeFiles/performance_tests_geneus.dir/rule
+
+.PHONY : performance_tests_geneus
+
+# fast build rule for target.
+performance_tests_geneus/fast:
+	cd /home/user/git_clones/portfolio/catkin_ws/build && $(MAKE) -f performance_tests/CMakeFiles/performance_tests_geneus.dir/build.make performance_tests/CMakeFiles/performance_tests_geneus.dir/build
+.PHONY : performance_tests_geneus/fast
 
 src/publisher.o: src/publisher.cpp.o
 
@@ -482,12 +662,20 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... subscriber"
+	@echo "... publisher"
+	@echo "... performance_tests_generate_messages_py"
+	@echo "... performance_tests_gennodejs"
+	@echo "... performance_tests_genlisp"
+	@echo "... performance_tests_genpy"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -495,15 +683,19 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... test"
+	@echo "... performance_tests_generate_messages"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... publisher"
-	@echo "... install/strip"
-	@echo "... subscriber"
-	@echo "... install/local"
+	@echo "... performance_tests_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... performance_tests_generate_messages_lisp"
+	@echo "... performance_tests_gencpp"
+	@echo "... _performance_tests_generate_messages_check_deps_SuperAwesome"
+	@echo "... performance_tests_generate_messages_cpp"
+	@echo "... performance_tests_generate_messages_eus"
+	@echo "... performance_tests_geneus"
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"

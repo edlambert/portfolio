@@ -257,17 +257,82 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
+# Target rules for targets named subscriber
 
 # Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
+subscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 subscriber
+.PHONY : subscriber
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build.make performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+subscriber/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/subscriber.dir/build.make performance_tests/CMakeFiles/subscriber.dir/build
+.PHONY : subscriber/fast
+
+#=============================================================================
+# Target rules for targets named publisher
+
+# Build rule for target.
+publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publisher
+.PHONY : publisher
+
+# fast build rule for target.
+publisher/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/publisher.dir/build.make performance_tests/CMakeFiles/publisher.dir/build
+.PHONY : publisher/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_generate_messages_py
+
+# Build rule for target.
+performance_tests_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages_py
+.PHONY : performance_tests_generate_messages_py
+
+# fast build rule for target.
+performance_tests_generate_messages_py/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_py.dir/build
+.PHONY : performance_tests_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_gennodejs
+
+# Build rule for target.
+performance_tests_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_gennodejs
+.PHONY : performance_tests_gennodejs
+
+# fast build rule for target.
+performance_tests_gennodejs/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_gennodejs.dir/build.make performance_tests/CMakeFiles/performance_tests_gennodejs.dir/build
+.PHONY : performance_tests_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_genlisp
+
+# Build rule for target.
+performance_tests_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_genlisp
+.PHONY : performance_tests_genlisp
+
+# fast build rule for target.
+performance_tests_genlisp/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_genlisp.dir/build.make performance_tests/CMakeFiles/performance_tests_genlisp.dir/build
+.PHONY : performance_tests_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_genpy
+
+# Build rule for target.
+performance_tests_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_genpy
+.PHONY : performance_tests_genpy
+
+# fast build rule for target.
+performance_tests_genpy/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_genpy.dir/build.make performance_tests/CMakeFiles/performance_tests_genpy.dir/build
+.PHONY : performance_tests_genpy/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -400,6 +465,19 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named performance_tests_generate_messages
+
+# Build rule for target.
+performance_tests_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages
+.PHONY : performance_tests_generate_messages
+
+# fast build rule for target.
+performance_tests_generate_messages/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages.dir/build
+.PHONY : performance_tests_generate_messages/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -452,30 +530,108 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named publisher
+# Target rules for targets named performance_tests_generate_messages_nodejs
 
 # Build rule for target.
-publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 publisher
-.PHONY : publisher
+performance_tests_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages_nodejs
+.PHONY : performance_tests_generate_messages_nodejs
 
 # fast build rule for target.
-publisher/fast:
-	$(MAKE) -f performance_tests/CMakeFiles/publisher.dir/build.make performance_tests/CMakeFiles/publisher.dir/build
-.PHONY : publisher/fast
+performance_tests_generate_messages_nodejs/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_nodejs.dir/build
+.PHONY : performance_tests_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named subscriber
+# Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
-subscriber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 subscriber
-.PHONY : subscriber
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
-subscriber/fast:
-	$(MAKE) -f performance_tests/CMakeFiles/subscriber.dir/build.make performance_tests/CMakeFiles/subscriber.dir/build
-.PHONY : subscriber/fast
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build.make performance_tests/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_generate_messages_lisp
+
+# Build rule for target.
+performance_tests_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages_lisp
+.PHONY : performance_tests_generate_messages_lisp
+
+# fast build rule for target.
+performance_tests_generate_messages_lisp/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_lisp.dir/build
+.PHONY : performance_tests_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_gencpp
+
+# Build rule for target.
+performance_tests_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_gencpp
+.PHONY : performance_tests_gencpp
+
+# fast build rule for target.
+performance_tests_gencpp/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_gencpp.dir/build.make performance_tests/CMakeFiles/performance_tests_gencpp.dir/build
+.PHONY : performance_tests_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named _performance_tests_generate_messages_check_deps_SuperAwesome
+
+# Build rule for target.
+_performance_tests_generate_messages_check_deps_SuperAwesome: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _performance_tests_generate_messages_check_deps_SuperAwesome
+.PHONY : _performance_tests_generate_messages_check_deps_SuperAwesome
+
+# fast build rule for target.
+_performance_tests_generate_messages_check_deps_SuperAwesome/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/build.make performance_tests/CMakeFiles/_performance_tests_generate_messages_check_deps_SuperAwesome.dir/build
+.PHONY : _performance_tests_generate_messages_check_deps_SuperAwesome/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_generate_messages_cpp
+
+# Build rule for target.
+performance_tests_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages_cpp
+.PHONY : performance_tests_generate_messages_cpp
+
+# fast build rule for target.
+performance_tests_generate_messages_cpp/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir/build
+.PHONY : performance_tests_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_generate_messages_eus
+
+# Build rule for target.
+performance_tests_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_generate_messages_eus
+.PHONY : performance_tests_generate_messages_eus
+
+# fast build rule for target.
+performance_tests_generate_messages_eus/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/build.make performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir/build
+.PHONY : performance_tests_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named performance_tests_geneus
+
+# Build rule for target.
+performance_tests_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 performance_tests_geneus
+.PHONY : performance_tests_geneus
+
+# fast build rule for target.
+performance_tests_geneus/fast:
+	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_geneus.dir/build.make performance_tests/CMakeFiles/performance_tests_geneus.dir/build
+.PHONY : performance_tests_geneus/fast
 
 # Help Target
 help:
@@ -497,7 +653,12 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... subscriber"
+	@echo "... publisher"
+	@echo "... performance_tests_generate_messages_py"
+	@echo "... performance_tests_gennodejs"
+	@echo "... performance_tests_genlisp"
+	@echo "... performance_tests_genpy"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -508,12 +669,19 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... performance_tests_generate_messages"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... publisher"
-	@echo "... subscriber"
+	@echo "... performance_tests_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... performance_tests_generate_messages_lisp"
+	@echo "... performance_tests_gencpp"
+	@echo "... _performance_tests_generate_messages_check_deps_SuperAwesome"
+	@echo "... performance_tests_generate_messages_cpp"
+	@echo "... performance_tests_generate_messages_eus"
+	@echo "... performance_tests_geneus"
 .PHONY : help
 
 
