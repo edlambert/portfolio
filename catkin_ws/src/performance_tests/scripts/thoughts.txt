@@ -1,0 +1,20 @@
+The behaviour of the listener under heavy traffic in Python is quite different to that in C++
+
+In C++ the length of the rx queue was declared along with the subscriber as 1000 messages.
+
+In Python there is no argument for queue length, but looking at the behaviour at high message rates the default appears to be very much more than 1000.
+
+Above 100hz the id received by the python script begins to lag that transmitted by the publisher. IF the publisher is stopped, the remaining messages are eventually dequeued in order, but the subscriber may continue printing for minutes after the publisher has stopped. 
+
+For example, comparing the timestamps for message 1002271 (sent at 1MHz):
+
+[ INFO] [1494707997.659257430]: 1002271
+[INFO] [1494708189.900513]: /listener_3847_1494707945834I heard 1002271 (errors 8)
+
+I think these are in seconds, (8189.900 - 7997.659) = 192.241s over three minutes to unload the buffer. The errors are infrequent but large due to the long buffer.
+
+If the sender is restarted while the buffer is being emptied, the new messages are interleaved with those on the buffer, so it is not a fifo.
+
+The maximum rate of the sender is about 100khz. I got a disk space warning after sending 500k messages. Are they getting swapped to disk? 500k 4 byte messages is only 2MB so they shouldnt be. I have 8GB ram.
+
+Python is able to keep up with the printing at 2khz. How fast could we go if we only printed if there was an error?
