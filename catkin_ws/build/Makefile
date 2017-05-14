@@ -633,6 +633,19 @@ performance_tests_geneus/fast:
 	$(MAKE) -f performance_tests/CMakeFiles/performance_tests_geneus.dir/build.make performance_tests/CMakeFiles/performance_tests_geneus.dir/build
 .PHONY : performance_tests_geneus/fast
 
+#=============================================================================
+# Target rules for targets named parser
+
+# Build rule for target.
+parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parser
+.PHONY : parser
+
+# fast build rule for target.
+parser/fast:
+	$(MAKE) -f testbot_description/CMakeFiles/parser.dir/build.make testbot_description/CMakeFiles/parser.dir/build
+.PHONY : parser/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -682,6 +695,7 @@ help:
 	@echo "... performance_tests_generate_messages_cpp"
 	@echo "... performance_tests_generate_messages_eus"
 	@echo "... performance_tests_geneus"
+	@echo "... parser"
 .PHONY : help
 
 

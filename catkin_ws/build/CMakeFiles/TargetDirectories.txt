@@ -55,3 +55,11 @@
 /home/user/git_clones/portfolio/catkin_ws/build/performance_tests/CMakeFiles/performance_tests_generate_messages_cpp.dir
 /home/user/git_clones/portfolio/catkin_ws/build/performance_tests/CMakeFiles/performance_tests_generate_messages_eus.dir
 /home/user/git_clones/portfolio/catkin_ws/build/performance_tests/CMakeFiles/performance_tests_geneus.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/list_install_components.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/install.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/rebuild_cache.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/edit_cache.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/parser.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/test.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/install/strip.dir
+/home/user/git_clones/portfolio/catkin_ws/build/testbot_description/CMakeFiles/install/local.dir
