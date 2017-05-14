@@ -1,0 +1,11 @@
+digraph G {
+node [shape=box];
+"base" [label="base"];
+"left_wheel" [label="left_wheel"];
+"right_wheel" [label="right_wheel"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base" -> "left_axle" [label="xyz: 0 -1 0 \nrpy: 0 -0 1.57"]
+"left_axle" -> "left_wheel"
+"base" -> "right_axle" [label="xyz: 0 1 0 \nrpy: 0 0 -1.57"]
+"right_axle" -> "right_wheel"
+}
