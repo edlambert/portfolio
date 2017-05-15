@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/user/git_clones/portfolio/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/93608ce9-2166-458c-b91a-e4ee6dae9eb0/git_clones/portfolio/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

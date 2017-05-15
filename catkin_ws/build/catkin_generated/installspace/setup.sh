@@ -8,7 +8,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/user/git_clones/portfolio/catkin_ws/install}
+: ${_CATKIN_SETUP_DIR:=/mnt/93608ce9-2166-458c-b91a-e4ee6dae9eb0/git_clones/portfolio/catkin_ws/install}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

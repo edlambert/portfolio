@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/subscriber.dir/src/subscriber.cpp.o"
-  "/home/user/git_clones/portfolio/catkin_ws/devel/lib/performance_tests/subscriber.pdb"
-  "/home/user/git_clones/portfolio/catkin_ws/devel/lib/performance_tests/subscriber"
+  "/mnt/93608ce9-2166-458c-b91a-e4ee6dae9eb0/git_clones/portfolio/catkin_ws/devel/lib/performance_tests/subscriber.pdb"
+  "/mnt/93608ce9-2166-458c-b91a-e4ee6dae9eb0/git_clones/portfolio/catkin_ws/devel/lib/performance_tests/subscriber"
 )
 
 # Per-language clean rules from dependency scanning.
