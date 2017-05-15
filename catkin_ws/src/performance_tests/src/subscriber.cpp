@@ -9,8 +9,10 @@ int last = 0;;
 int discontinuity_count = 0;
 void chatterCallback(const std_msgs::Int32::ConstPtr& msg)
 {
-  
-  ROS_INFO("I heard: [%d] (discontinuity_count: %d)", msg->data, discontinuity_count);
+  if((msg->data % 1000)==0)
+  {
+    ROS_INFO("I heard: [%d] (discontinuity_count: %d)", msg->data, discontinuity_count);
+  }
   if(msg->data - last != 1)
   {
 	ROS_INFO("Discontinuity!! I heard: [%d] after [%d]", msg->data, last);
